@@ -1,3 +1,15 @@
+"""
+Modulo das escalas
+
+Attributes:
+    ESCALAS: Escalas implementadas usnado a notação de inteiros
+    NOTAS: Notas musicais
+
+# Escalas
+
+# Notas
+"""
+
 NOTAS = 'C C# D D# E F F# G G# A A# B'.split()
 ESCALAS = {'maior': (0, 2, 4, 5, 7, 9, 11), 'menor': (0, 2, 3, 5, 7, 8, 10)}
 
