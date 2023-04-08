@@ -5,6 +5,10 @@ Notas musicais é um CLI para ajudar na formação de escalas e acordes
 
 Temos dois comandos disponíveis: `escala` e `acorde`
 
+{% include "templates/cards.html" %}
+
+{% include "templates/instalacao.md" %}
+
 ## Como usar?
 
 ### Escalas
@@ -12,7 +16,7 @@ Temos dois comandos disponíveis: `escala` e `acorde`
 Você pode chamar as escalas via linha de comando. Por Exemplo:
 
 ```bash
-poetry run notas-musicais escala
+{{commands.run}} escala
 ```
 
 Retornando os graus e as notas correnpondentes a essa escala:
@@ -30,7 +34,7 @@ Retornando os graus e as notas correnpondentes a essa escala:
 O Primero parâmetro do CLI é a tônica da escala que deseja exibir. Desta forma, você pode alterar a escala retornada. Por exemplo, a escala de F#:
 
 ```bash
-poetry run notas-musicais escala F#
+{{commands.run}}  escala F#
 ```
 
 #### Alteração na tonalidade da escala
@@ -38,7 +42,7 @@ poetry run notas-musicais escala F#
 Você pode alterar a tonalidade da escala também como segundo parâmetro, exmeplo na escala de `D#` maior:
 
 ```
-poetry run notas-musicais escala D# menor
+{{commands.run}}  escala D# menor
 
 ┏━━━━┳━━━━┳━━━━━┳━━━━┳━━━━┳━━━━┳━━━━━┓
 ┃ I  ┃ II ┃ III ┃ IV ┃ V  ┃ VI ┃ VII ┃
@@ -51,7 +55,7 @@ poetry run notas-musicais escala D# menor
 
 Uso básico
 ```bash
-poetry run notas-musicais acorde
+{{commands.run}}  acorde
 ┏━━━┳━━━━━┳━━━┓
 ┃ I ┃ III ┃ V ┃
 ┡━━━╇━━━━━╇━━━┩
@@ -62,7 +66,7 @@ poetry run notas-musicais acorde
 ### Variações na cifra
 
 ```bash
-poetry run notas-musicais acorde C+
+{{commands.run}}  acorde C+
 ┏━━━┳━━━━━┳━━━━┓
 ┃ I ┃ III ┃ V+ ┃
 ┡━━━╇━━━━━╇━━━━┩
@@ -76,7 +80,7 @@ Até o momento você pode usar acordes maiores, menores, diminuto e aumentados
 
 Para descobrir outras opções execute a flag `--help`:
 ```bash
-poetry run notas-musicais --help
+{{commands.run}}  --help
 
  Usage: escalas [OPTIONS] [TONICA] [TONALIDADE]
 
