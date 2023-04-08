@@ -1,7 +1,8 @@
 site_name: Notas musicais
-repo_url: https://github.com/matheusfrteixeira/notas-musicais
-repo_name: matheusfrteixeira/notas-musicais
-edit_uri: tree/master/docs
+repo_url: https://github.com/dunossauro/notas-musicais
+repo_name: dunossauro/notas-musicais
+edit_uri: tree/main/docs
+
 theme:
   name: material
   language: pt-BR
@@ -10,12 +11,30 @@ theme:
 
 markdown_extensions:
   - attr_list
+  - admonition
+  - pymdownx.tasklist
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 
 extra_css:
-  - stylesheet/extra.css
+  - stylesheets/extra.css
+
+watch:
+   - notas_musicais
 
 plugins:
+- macros
 - mkdocstrings:
     handlers:
       python:
         paths: [notas_musicais]
+
+extra:
+  commands:
+    run: notas-musicais
